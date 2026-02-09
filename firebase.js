@@ -1,8 +1,8 @@
-// Import Firebase functions (modern modular SDK)
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.24.0/firebase-app.js";
-import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.24.0/firebase-firestore.js";
+// firebase.js
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+import { getFirestore, collection, addDoc, onSnapshot, serverTimestamp, query, orderBy } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
 
-// Your Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyB8s4zuysWQH7hT18hnKUt96wgirBFODLA",
   authDomain: "spaza-app-8f69c.firebaseapp.com",
@@ -13,9 +13,8 @@ const firebaseConfig = {
   measurementId: "G-46GS3FYHSQ"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 const db = getFirestore(app);
 
-// Export db for use in reviews.js
-export { db, collection, addDoc, query, orderBy, onSnapshot, serverTimestamp };
+export { db, collection, addDoc, onSnapshot, serverTimestamp, query, orderBy };

@@ -160,17 +160,42 @@ header .btn-whatsapp:hover {
 
 /* Reviews List */
 #reviews-list {
-    max-width: 600px;
+    display: flex;              /* horizontal layout */
+    flex-direction: row;        /* side by side */
+    gap: 1rem;                  /* space between cards */
+    overflow-x: auto;           /* horizontal scroll */
+    padding: 1rem 0;
+    max-width: 90%;
     margin: 2rem auto 0;
     text-align: left;
 }
 
-.review-item {
+.review-card {
     background-color: white;
     padding: 1rem;
     border-radius: 10px;
-    margin-bottom: 1rem;
+    min-width: 250px;           /* ensure cards don’t shrink too small */
+    flex: 0 0 auto;             /* prevents flex items from shrinking */
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Scrollbar styling */
+#reviews-list::-webkit-scrollbar {
+    height: 6px;
+}
+
+#reviews-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+#reviews-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+#reviews-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 .btn-whatsapp {
@@ -188,7 +213,6 @@ header .btn-whatsapp:hover {
     background-color: #1ebe5b;
     text-decoration: none; /* ✅ ensures no underline on hover */
 }
-
 
 /* ===== Footer ===== */
 footer {
@@ -213,7 +237,14 @@ footer {
     header p {
         font-size: 0.95rem;
     }
+
+    /* Stack reviews vertically on mobile */
+    #reviews-list {
+        flex-direction: column;
+        overflow-x: hidden;
+    }
 }
+
 /* ===== Gallery ===== */
 #gallery {
     display: none; /* hidden by default */
@@ -273,4 +304,3 @@ footer {
         height: auto;
     }
 }
-
