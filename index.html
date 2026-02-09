@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madzi's Medic Touch</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <img src="assets/logo.png" alt="Madzi's Medic Touch Logo" class="logo">
+            <h1>Madzi's Medic Touch</h1>
+            <p>Healing hands for body balance & recovery</p>
+            <div class="hero-buttons">
+                <a href="#gallery" class="btn-whatsapp">View Gallery</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+
+            <div class="service-card">
+                <i class="fas fa-shoe-prints fa-4x service-icon"></i>
+                <h3>Foot Reflexology</h3>
+                <p>60 minutes — R380</p>
+                <a href="https://wa.me/27608827421?text=Hi, I’d like to book a 60-minute foot reflexology" class="btn-whatsapp" target="_blank" rel="noopener">Book</a>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-shoe-prints fa-4x service-icon"></i>
+                <h3>Foot Reflexology</h3>
+                <p>30 minutes — R280</p>
+                <a href="https://wa.me/27608827421?text=Hi, I’d like to book a 30-minute foot reflexology" class="btn-whatsapp" target="_blank" rel="noopener">Book</a>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-running fa-4x service-icon"></i>
+                <h3>Sports Massage</h3>
+                <p>90 minutes — R800</p>
+                <a href="https://wa.me/27608827421?text=Hi, I’d like to book a 90-minute sports massage" class="btn-whatsapp" target="_blank" rel="noopener">Book</a>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-running fa-4x service-icon"></i>
+                <h3>Sports Massage</h3>
+                <p>60 minutes — R700</p>
+                <a href="https://wa.me/27608827421?text=Hi, I’d like to book a 60-minute sports massage" class="btn-whatsapp" target="_blank" rel="noopener">Book</a>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-hand-holding-medical fa-4x service-icon"></i>
+                <h3>Full Body Massage</h3>
+                <p>90 minutes — R550</p>
+                <a href="https://wa.me/27608827421?text=Hi, I’d like to book a 90-minute full body massage" class="btn-whatsapp" target="_blank" rel="noopener">Book</a>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-hand-holding-medical fa-4x service-icon"></i>
+                <h3>Full Body Massage</h3>
+                <p>60 minutes — R450</p>
+                <a href="https://wa.me/27608827421?text=Hi, I’d like to book a 60-minute full body massage" class="btn-whatsapp" target="_blank" rel="noopener">Book</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews">
+        <h2>Customer Reviews</h2>
+
+        <form id="review-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <select id="rating" required>
+                <option value="">Rating</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="1">⭐</option>
+            </select>
+            <textarea id="comment" placeholder="Write your review" required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+
+        <div id="reviews-list"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact: 060 882 7421 | WhatsApp Booking Available</p>
+        <p>A call out fee may apply depending on distance</p>
+    </footer>
+
+    <!-- ===== Gallery Section ===== -->
+    <section id="gallery" class="gallery">
+        <!-- Header with Close Button -->
+        <div class="gallery-header">
+            <a href="index.html" class="close-btn"><i class="fas fa-times"></i></a>
+        </div>
+
+        <!-- Gallery Images -->
+        <div class="gallery-container">
+            <img src="assets/image1.jpg" alt="Gallery Image 1" class="gallery-img">
+            <img src="assets/image2.jpg" alt="Gallery Image 2" class="gallery-img">
+            <img src="assets/image3.jpg" alt="Gallery Image 3" class="gallery-img">
+            <img src="assets/image4.jpg" alt="Gallery Image 4" class="gallery-img">
+            <img src="assets/image5.jpg" alt="Gallery Image 5" class="gallery-img">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <!-- Firebase Config -->
+    <script src="firebase.js"></script>
+
+    <!-- Reviews JS -->
+    <script src="reviews.js"></script>
+
+</body>
+</html>
