@@ -16,7 +16,7 @@ body {
 header {
     text-align: center;
     padding: 3rem 1rem;
-    background-color: #04624a; /* Dark green from logo */
+    background-color: #04624a;
     color: white;
 }
 
@@ -30,6 +30,22 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
+/* NEW – tagline: Knot Breaker · Pain Taker · Ache Soother */
+.hero-tagline {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    color: #a8f0d8;
+    margin-bottom: 0.6rem;
+}
+
+/* NEW – sub text under tagline */
+.hero-sub {
+    font-size: 0.98rem;
+    color: #d9d9d9;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
 header p {
     font-size: 1rem;
     color: #d9d9d9;
@@ -39,7 +55,7 @@ header p {
 header .btn-whatsapp {
     display: inline-block;
     padding: 0.7rem 1.5rem;
-    background-color: #25D366; /* WhatsApp green */
+    background-color: #25D366;
     color: white;
     font-weight: 600;
     border-radius: 50px;
@@ -49,6 +65,24 @@ header .btn-whatsapp {
 
 header .btn-whatsapp:hover {
     background-color: #1ebe5b;
+}
+
+/* NEW – outline button for View Gallery */
+.btn-outline {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 2px solid white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: #04624a;
 }
 
 /* ===== Services Section ===== */
@@ -100,7 +134,6 @@ header .btn-whatsapp:hover {
     margin-bottom: 1rem;
 }
 
-/* Service Button */
 .service-card .btn-whatsapp {
     padding: 0.5rem 1rem;
     font-size: 0.95rem;
@@ -158,12 +191,11 @@ header .btn-whatsapp:hover {
     background-color: #025235;
 }
 
-/* Reviews List */
 #reviews-list {
-    display: flex;              /* horizontal layout */
-    flex-direction: row;        /* side by side */
-    gap: 1rem;                  /* space between cards */
-    overflow-x: auto;           /* horizontal scroll */
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    overflow-x: auto;
     padding: 1rem 0;
     max-width: 90%;
     margin: 2rem auto 0;
@@ -174,44 +206,30 @@ header .btn-whatsapp:hover {
     background-color: white;
     padding: 1rem;
     border-radius: 10px;
-    min-width: 250px;           /* ensure cards don’t shrink too small */
-    flex: 0 0 auto;             /* prevents flex items from shrinking */
+    min-width: 250px;
+    flex: 0 0 auto;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* Scrollbar styling */
-#reviews-list::-webkit-scrollbar {
-    height: 6px;
-}
-
-#reviews-list::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 3px;
-}
-
-#reviews-list::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 3px;
-}
-
-#reviews-list::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
+#reviews-list::-webkit-scrollbar { height: 6px; }
+#reviews-list::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 3px; }
+#reviews-list::-webkit-scrollbar-thumb { background: #888; border-radius: 3px; }
+#reviews-list::-webkit-scrollbar-thumb:hover { background: #555; }
 
 .btn-whatsapp {
     display: inline-block;
     padding: 0.7rem 1.5rem;
-    background-color: #25D366; /* WhatsApp green */
+    background-color: #25D366;
     color: white;
     font-weight: 600;
     border-radius: 50px;
-    text-decoration: none; /* ✅ removes underline */
+    text-decoration: none;
     transition: 0.3s;
 }
 
 .btn-whatsapp:hover {
     background-color: #1ebe5b;
-    text-decoration: none; /* ✅ ensures no underline on hover */
+    text-decoration: none;
 }
 
 /* ===== Footer ===== */
@@ -234,11 +252,14 @@ footer {
         font-size: 1.8rem;
     }
 
-    header p {
+    .hero-tagline {
         font-size: 0.95rem;
     }
 
-    /* Stack reviews vertically on mobile */
+    .hero-sub {
+        font-size: 0.9rem;
+    }
+
     #reviews-list {
         flex-direction: column;
         overflow-x: hidden;
@@ -247,7 +268,7 @@ footer {
 
 /* ===== Gallery ===== */
 #gallery {
-    display: none; /* hidden by default */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -255,11 +276,11 @@ footer {
     height: 100%;
     background-color: rgba(0,0,0,0.95);
     z-index: 9999;
-    overflow-y: scroll; /* allow vertical scrolling on mobile */
+    overflow-y: scroll;
 }
 
 #gallery:target {
-    display: block; /* show gallery when linked with #gallery */
+    display: block;
 }
 
 .gallery-header {
@@ -297,7 +318,6 @@ footer {
     transform: scale(1.02);
 }
 
-/* Mobile full screen */
 @media (max-width: 768px) {
     .gallery-img {
         width: 100%;
